@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 218 70% 12%;
+    
+    /* RS Construções brand colors */
+    --rs-primary: 221 83% 25%;
+    --rs-primary-light: 221 83% 35%;
+    --rs-accent: 199 89% 48%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 70% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 70% 12%;
+
+    --primary: 218 70% 12%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-light: 218 45% 25%;
+    --primary-gradient-start: 218 70% 12%;
+    --primary-gradient-end: 220 52% 30%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 218 70% 12%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 220 52% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 218 70% 12%;
+    
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 218 70% 12%;
+
+    --radius: 1rem;
+    
+    --shadow-sm: 0 1px 3px 0 hsl(218 70% 12% / 0.08);
+    --shadow-md: 0 4px 12px -2px hsl(218 70% 12% / 0.1);
+    --shadow-lg: 0 10px 40px -10px hsl(218 70% 12% / 0.15);
+    --shadow-xl: 0 20px 60px -15px hsl(218 70% 12% / 0.25);
+    --shadow-2xl: 0 30px 80px -20px hsl(218 70% 12% / 0.3);
+    
+    --spacing-section: clamp(3rem, 8vw, 6rem);
+    --spacing-content: clamp(2rem, 5vw, 4rem);
+  }
+
+  .dark {
+    --background: 218 70% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 52% 16%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 52% 16%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 218 70% 12%;
+    
+    --primary-light: 220 45% 40%;
+    --primary-gradient-start: 218 70% 12%;
+    --primary-gradient-end: 220 52% 30%;
+
+    --secondary: 220 52% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 52% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 220 52% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 218 70% 12%;
+    
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 220 52% 25%;
+    --input: 220 52% 25%;
+    --ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
